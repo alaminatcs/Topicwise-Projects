@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://cdn.jsdelivr.net/npm/daisyui@4.12.10/dist/full.min.css" rel="stylesheet" type="text/css" />
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <title>Geometric Calculator</title>
+</head>
+
+<body class="px-8 py-4 bg-white">
+    <!-- header section -->
+    <header class="flex justify-between bg-[#E7F4FB] rounded-sm">
+        <div class="left-nav px-4 py-2">
+            <h1 class="text-[#3C3E40] text-2xl font-semibold">GeoCal</h1>
+            <p class="text-[#676C6F]">Geometric Calculator</p>
+        </div>
+        <div class="right-nav px-4 py-2 flex items-center">
+            <button type="button" class="btn btn-primary w-28">
+                <a href="https://www.khanacademy.org/math/geometry-home" class="">Learn</a>
+            </button>
+        </div>
+    </header>
+    <!-- main section -->
+    <main class="mt-4">
+        <!-- shape selection -->
+        <div class="mb-4">
+            <!-- <label for="shape-select" class="mr-4 text-xl">Select Shape:</label>
+            <select id="shape-select" class="bg-gray-200 p-2 rounded">
+                <option value="triangle">Triangle</option>
+                <option value="rectangle">Rectangle</option>
+                <option value="parallelogram">Parallelogram</option>
+                <option value="rhombus">Rhombus</option>
+                <option value="pentagon">Pentagon</option>
+                <option value="ellipse">Ellipse</option>
+            </select> -->
+
+            <button type="button" onclick="shapeType('triangle')" class="btn btn-primary w-28 mr-4 mb-2">Triangle</button>
+            <button type="button" onclick="shapeType('rectangle')" class="btn btn-primary w-28 mr-4 mb-2">Rectangle</button>
+            <button type="button" onclick="shapeType('parallelogram')" class="btn btn-primary w-28 mr-4 mb-2">Parallelogram</button>
+            <button type="button" onclick="shapeType('rhombus')" class="btn btn-primary w-28 mr-4 mb-2">Rhombus</button>
+            <button type="button" onclick="shapeType('pentagon')" class="btn btn-primary w-28 mr-4 mb-2">Pentagon</button>
+            <button type="button" onclick="shapeType('ellipse')" class="btn btn-primary w-28 mr-4 mb-2">Ellipse</button>
+        </div>
+        <!-- calculation section -->
+        <div id="container" class="flex flex-col md:flex-row">
+            <!-- triangle section -->
+            <div id="triangle" class="flex-1 card bg-base-100 shadow-xl> rounded-md shadow-xl">
+                <figure class="pt-8">
+                    <img src="images/triangle.png" alt="Triangle Shape" class="rounded-xl" />
+                </figure>
+                <div class="card-body items-center text-center">
+                    <h2 class="card-title">Triangle</h2>
+                    <p>Area (A) = 0.5 x Base x Height</p>
+                    <div class="flex">
+                        <input type="text" id="tri-base" placeholder="base" class="w-24 pl-2 rounded-sm text-xl">
+                        <span class="mx-1 text-xl">cm</span>
+                        <input type="text" id="tri-height" placeholder="height" class="w-24 pl-2 rounded-sm text-xl">
+                        <span class="ml-1 text-xl">cm</span>
+                    </div>
+                    <div class="card-actions">
+                        <button onclick="calculateArea('0.5', 'tri-base', 'tri-height')" class="btn btn-primary mt-6 w-48">Calculate Now</button>
+                    </div>
+                </div>
+            </div>
+            <!-- rectangle section -->
+            <div id="rectangle" class="hidden flex-1 card bg-base-100 shadow-xl> rounded-md shadow-xl">
+                <figure class="pt-8">
+                    <img src="images/rectangle.png" alt="Rectangle Shape" class="rounded-xl" />
+                </figure>
+                <div class="card-body items-center text-center">
+                    <h2 class="card-title">Rectangle</h2>
+                    <p>Area (A) = Width x Length</p>
+                    <div class="flex">
+                        <input type="text" id="rect-width" placeholder="width" class="w-24 pl-2 rounded-sm text-xl">
+                        <span class="mx-1 text-xl">cm</span>
+                        <input type="text" id="rect-length" placeholder="length" class="w-24 pl-2 rounded-sm text-xl">
+                        <span class="ml-1 text-xl">cm</span>
+                    </div>
+                    <div class="card-actions">
+                        <button onclick="calculateArea('rect-width', 'rect-length')" class="btn btn-primary mt-6 w-48">Calculate Now</button>
+                    </div>
+                </div>
+            </div>
+            <!-- parallelogram section -->
+            <div id="parallelogram" class="hidden flex-1 card bg-base-100 shadow-xl> rounded-md shadow-xl">
+                <figure class="pt-8">
+                    <img src="images/parallelogram.png" alt="Parallelogram Shape" class="rounded-xl" />
+                </figure>
+                <div class="card-body items-center text-center">
+                    <h2 class="card-title">Parallelogram</h2>
+                    <p>Area (A) = Base x Height</p>
+                    <div class="flex">
+                        <input type="text" id="para-base" placeholder="base" class="w-24 pl-2 rounded-sm text-xl">
+                        <span class="mx-2 text-xl">cm</span>
+                        <input type="text" id="para-height" placeholder="height" class="w-24 pl-2 rounded-sm text-xl">
+                        <span class="ml-2 text-xl">cm</span>
+                    </div>
+                    <div class="card-actions">
+                        <button onclick="calculateArea('para-base', 'para-height')" class="btn btn-primary mt-6 w-48">Calculate Now</button>
+                    </div>
+                </div>
+            </div>
+            <!-- rhombus section -->
+            <div id="rhombus" class="hidden flex-1 card bg-base-100 shadow-xl> rounded-md shadow-xl">
+                <figure class="pt-8">
+                    <img src="images/rhombus.png" alt="Rhombus Shape" class="rounded-xl" />
+                </figure>
+                <div class="card-body items-center text-center">
+                    <h2 class="card-title">Rhombus</h2>
+                    <p>Area (A) = 0.5 x D1 x D2</p>
+                    <div class="flex">
+                        <input type="text" id="diag-1" placeholder="diag-1" class="w-24 pl-2 rounded-sm text-xl">
+                        <span class="mx-1 text-xl">cm</span>
+                        <input type="text" id="diag-2" placeholder="diag-2" class="w-24 pl-2 rounded-sm text-xl">
+                        <span class="ml-1 text-xl">cm</span>
+                    </div>
+                    <div class="card-actions">
+                        <button onclick="calculateArea('0.5', 'diag-1', 'diag-2')" class="btn btn-primary mt-6 w-48">Calculate Now</button>
+                    </div>
+                </div>
+            </div>
+            <!-- pentagon section -->
+            <div id="pentagon" class="hidden flex-1 card bg-base-100 shadow-xl> rounded-md shadow-xl">
+                <figure class="pt-8">
+                    <img src="images/pentagon.png" alt="Pentagon Shape" class="rounded-xl" />
+                </figure>
+                <div class="card-body items-center text-center">
+                    <h2 class="card-title">Pentagon</h2>
+                    <p>Area (A) = 0.5 x Peri. x Apothem</p>
+                    <div class="flex">
+                        <input type="text" id="peri" placeholder="peri" class="w-24 pl-2 rounded-sm text-xl">
+                        <span class="mx-1 text-xl">cm</span>
+                        <input type="text" id="apo" placeholder="apo" class="w-24 pl-2 rounded-sm text-xl">
+                        <span class="ml-1 text-xl">cm</span>
+                    </div>
+                    <div class="card-actions">
+                        <button onclick="calculateArea('0.5', 'peri', 'apo')" class="btn btn-primary mt-6 w-48">Calculate Now</button>
+                    </div>
+                </div>
+            </div>
+            <!-- ellipse section-->
+            <div id="ellipse" class="hidden flex-1 card bg-base-100 shadow-xl> rounded-md shadow-xl">
+                <figure class="pt-8">
+                    <img src="images/ellipse.png" alt="Ellipse Shape" class="rounded-xl" />
+                </figure>
+                <div class="card-body items-center text-center">
+                    <h2 class="card-title">Ellipse</h2>
+                    <p>Area (A) = π x MaxR x MinR</p>
+                    <div class="flex">
+                        <input type="text" id="mx-rad" placeholder="major-r" class="w-24 pl-2 rounded-sm text-xl">
+                        <span class="mx-1 text-xl">cm</span>
+                        <input type="text" id="mn-rad" placeholder="minor-r" class="w-24 pl-2 rounded-sm text-xl">
+                        <span class="ml-1 text-xl">cm</span>
+                    </div>
+                    <div class="card-actions">
+                        <button onclick="calculateArea('3.1416', 'mx-rad', 'mn-rad')" class="btn btn-primary mt-6 w-48">Calculate Now</button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- result section -->
+            <div class="flex-1 text-[#3C3E40] text-center">
+                <h1 class="text-3xl font-bold underline">Result of Area</h1>
+                <p id="result" class="pt-4 text-xl font-bold"></p>
+            </div>
+        </div>
+
+    </main>
+    <footer class="mt-4 bg-[#E7F4FB] text-[#3C3E40] text-center">
+        <p class="pt-4 text-3xl font-bold underline">Contact Information</p>
+        <address><a href="mailto:alaminatcse@gmail.com" class="hover:bg-violet-600">alaminatcse@gmail.com</a></address>
+        <address>Dhaka, Bangladesh.</address>
+    </footer>
+    <script src="index-js.js"></script>
+</body>
+
+</html>
