@@ -4,6 +4,8 @@ function shapeType(figure) {
     for (const shape of shapeList) {
         if (shape === figure) {
             document.getElementById(shape).style.display = 'flex';
+            document.getElementById('result').innerText = 'Here you will see the area of your specified shape...';
+            document.getElementById('result').style.color = '#3C3E40';
         }
         else {
             document.getElementById(shape).style.display = 'none';
@@ -20,6 +22,7 @@ function calculateArea(...args) {
     }
     ans *= parseFloat(document.getElementById(args[basIndex]).value);
     ans *= parseFloat(document.getElementById(args[heightIndex]).value);
+    ans = ans.toFixed(2);
 
     if (isNaN(ans) === true) {
         document.getElementById('result').innerText = 'Enter the valid inputs';
