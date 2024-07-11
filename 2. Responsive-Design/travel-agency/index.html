@@ -1,223 +1,225 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>AH Travel</title>
-    <link rel="stylesheet" href="style.css" />
-    <link rel="stylesheet" href="nav.css" />
-    <link
-      rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
-      integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA=="
-      crossorigin="anonymous"
-      referrerpolicy="no-referrer"
-    />
-  </head>
-  <body>
-    <header>
-      <nav>
-        <div class="left-nav">
-          <img src="./images/logo.png" alt="banner image" />
-          <div class="logo-text">AH <span class="red-text">Tour</span></div>
-        </div>
-        <input type="checkbox" title="check" id="check" />
-        <label for="check" class="check-button">
-          <i class="fa fa-bars"></i>
-        </label>
-        <ul>
-          <li><a href="index.html"><span class="red-text">Home</span></a></li>
-          <li><a href="#packages">Packages</a></li>
-          <li><a href="#testmonial">Testmonial</a></li>
-          <li><a href="#blog">Blog</a></li>
-          <li><a href="#contact">Contact</a></li>
-        </ul>
-      </nav>
-      <section class="banner">
-        <div class="heading">Explore Your Travel</div>
-        <div class="heading-description">
-          Embark on unforgettable journeys with us to Discover captivating
-          destinations, create lasting memories, and embrace the adventure of a
-          lifetime!
-        </div>
-        <div class="search-option">
-          <form>
-            <label for="place-search">
-              <input
-                type="search"
-                id="place-search"
-                placeholder="Where to go"
-              />
-            </label>
-            <label for="when">
-              <input type="text" id="when" placeholder="When" onfocus="this.type='date'" onblur="this.type='text'"/>
-            </label>
-            <label for="tour-type">
-              <select id="tour-type" title="Select Type">
-                <option value="select">Select Type</option>
-                <option value="regular">Regular</option>
-                <option value="packages">Package</option>
-                <option value="premium">Premium</option>
-              </select>
-            </label>
-            <div class="find-now">
-              <button type="submit">Find Now</button>
-            </div>
-          </form>
-        </div>
-      </section>
-    </header>
-    <main>
-      <section id="blog" class="popular-tour">
-        <div class="tour-part1">
-          <h3 class="title">Our Popular Tours</h3>
-          <p class="title-description">
-            Immerse in scenic beauty, explore diverse cultures. From historic
-            sites to exotic landscapes, create unforgettable memories with us
-            <li>
-              Mountain Majesty Trek: Conquer breathtaking peaks and pristine
-              landscapes. Experience the thrill of high-altitude beauty, where
-              every step is a triumph.
-            </li>
-            <li>
-              Mystical Temples Tour: Uncover ancient wonders and cultural
-              richness. Temples whisper tales of history and spirituality, a
-              journey of awe.
-            </li>
-            <li>
-              Coastal Escapes: Embrace sun-kissed shores and vibrant marine
-              life. Coastal paradises await, offering relaxation and adventure
-              in perfect harmony.
-            </li>
-            Join us on a limitless exploration! Beyond these, countless
-            adventures await. Choose from diverse packages, and let your
-            wanderlust thrive.
-          </p>
-          <br />
-          <a href=""><button>Read More</button></a>
-        </div>
-        <div class="tour-part2">
-          <img src="./images/tour.png" alt="Mountain Everest Image" />
-        </div>
-      </section>
-      <section class="choose-destination">
-        <h3 class="title">Choose Your Destination</h3>
-        <p class="title-description">
-          Tailor your journey with our curated destinations. From serene
-          retreats to thrilling escapades, your adventure begins here.
-        </p>
-        <div class="destination-images">
-          <div class="dimage image1"><a href="">Maldives</a></div>
-          <div class="dimage image2"><a href="">Indonesia</a></div>
-          <div class="dimage image3"><a href="">Srilanka</a></div>
-          <div class="dimage image4"><a href="">North America</a></div>
-          <div class="dimage image5"><a href="">Kashmir-India</a></div>
-          <div class="dimage image6"><a href="">Bangladesh</a></div>
-          <div class="dimage image7"><a href="">Bandarban-BD</a></div>
-        </div>
-      </section>
-      <section class="why-choose-us">
-        <h3 class="title">Why Choose Us</h3>
-        <p class="title-description">
-          Elevate your travel experience. Handpicked hotels, world-class
-          services, and our best price guarantee ensure unparalleled
-          satisfaction and value.
-        </p>
-        <div class="card-container">
-          <div class="card-1 container">
-            <div class="hotel-button"><i class="fa-solid fa-hotel"></i></div>
 
-            <h4>Handpicked Hotels</h4>
-            <p>
-              Indulge in luxury and comfort with our meticulously selected
-              accommodations, ensuring an enchanting stay at every destination.
-            </p>
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>AH Travel</title>
+  <link rel="stylesheet" href="style.css" />
+  <link rel="stylesheet" href="nav.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css"
+    integrity="sha512-DTOQO9RWCH3ppGqcWaEA1BIZOC6xxalwEsw9c2QQeAIftl+Vegovlnee1c9QX4TctnWMn13TZye+giMm8e2LwA=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+
+<body>
+  <header>
+    <!-- navbar section -->
+    <nav>
+      <div class="left-nav">
+        <img src="./images/logo.png" alt="banner image" />
+        <div class="logo-text">AH <span class="red-text">Tour</span></div>
+      </div>
+      <input type="checkbox" title="check" id="check" />
+      <label for="check" class="check-button">
+        <i class="fa fa-bars"></i>
+      </label>
+      <ul>
+        <li><a href="index.html"><span class="red-text">Home</span></a></li>
+        <li><a href="#packages">Packages</a></li>
+        <li><a href="#testmonial">Testmonial</a></li>
+        <li><a href="#blog">Blog</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+    </nav>
+    <!-- banner section -->
+    <section class="banner">
+      <div class="heading">Explore Your Travel</div>
+      <div class="heading-description">
+        Embark on unforgettable journeys with us to Discover captivating
+        destinations, create lasting memories, and embrace the adventure of a
+        lifetime!
+      </div>
+      <div class="search-option">
+        <form>
+          <label for="place-search">
+            <input type="search" id="place-search" placeholder="Where to go" />
+          </label>
+          <label for="when">
+            <input type="text" id="when" placeholder="When" onfocus="this.type='date'" onblur="this.type='text'" />
+          </label>
+          <label for="tour-type">
+            <select id="tour-type" title="Select Type">
+              <option value="select">Select Type</option>
+              <option value="regular">Regular</option>
+              <option value="packages">Package</option>
+              <option value="premium">Premium</option>
+            </select>
+          </label>
+          <div class="find-now">
+            <button type="submit">Find Now</button>
           </div>
-          <div class="card-2 container">
-            <div class="map-button">
-              <i class="fa-solid fa-map-location"></i>
-            </div>
-            <h4>World Class Service</h4>
-            <p>
-              Experience excellence with our dedicated team, providing
-              unparalleled assistance, guidance, and personalized services
-              throughout your journey.
-            </p>
-          </div>
-          <div class="card-3 container">
-            <div class="price-button"><i class="fa-solid fa-tags"></i></div>
-            <h4>Best Price Guarantee</h4>
-            <p>
-              Enjoy unbeatable value. We promise the best prices for your dream
-              vacations, ensuring affordability without compromising on quality
-              and experience.
-            </p>
-          </div>
-        </div>
-      </section>
-      <section id="packages" class="deals-discount">
-        <h3 class="title">Deals & Discounts</h3>
+        </form>
+      </div>
+    </section>
+  </header>
+  <!-- main section -->
+  <main>
+    <!-- most popular tour-destination -->
+    <section id="blog" class="popular-tour">
+      <div class="tour-part1">
+        <h3 class="title">Our Popular Tours</h3>
         <p class="title-description">
-          Unlock savings! Dive into our exclusive deals and discounts. Elevate
-          your travel experience without breaking the bank. Your adventure, your
-          savings.
+          Immerse in scenic beauty, explore diverse cultures. From historic
+          sites to exotic landscapes, create unforgettable memories with us
+          <li>
+            Mountain Majesty Trek: Conquer breathtaking peaks and pristine
+            landscapes. Experience the thrill of high-altitude beauty, where
+            every step is a triumph.
+          </li>
+          <li>
+            Mystical Temples Tour: Uncover ancient wonders and cultural
+            richness. Temples whisper tales of history and spirituality, a
+            journey of awe.
+          </li>
+          <li>
+            Coastal Escapes: Embrace sun-kissed shores and vibrant marine
+            life. Coastal paradises await, offering relaxation and adventure
+            in perfect harmony.
+          </li>
+          Join us on a limitless exploration! Beyond these, countless
+          adventures await. Choose from diverse packages, and let your
+          wanderlust thrive.
         </p>
-        <div class="dealspart-1">
-          <div class="dealcard">
-            <div class="cardtop">
-              <i class="fa-solid fa-clock"> <span>7 Day / 6 Night</span></i>
-              <i class="fa-solid fa-people-group"><span>Max : 10</span></i>
-              <i class="fa-solid fa-location-dot"><span> Malaysia</span></i>
-            </div>
-            <h4>Tour To Malaysia</h4>
-            <p>
-              Malaysia beckons with diverse attractions. Explore bustling
-              cities, tropical rainforests, and cultural treasures. A tapestry
-              of experiences awaits in Malaysia.
-            </p>
-            <h5>Price: $1400 - $1600</h5>
-            <br />
-            <button>Book Now</button>
-          </div>
+        <br />
+        <a href=""><button>Read More</button></a>
+      </div>
+      <div class="tour-part2">
+        <img src="./images/tour.png" alt="Mountain Everest Image" />
+      </div>
+    </section>
+    <!-- available tour-destinations -->
+    <section class="choose-destination">
+      <h3 class="title">Choose Your Destination</h3>
+      <p class="title-description">
+        Tailor your journey with our curated destinations. From serene
+        retreats to thrilling escapades, your adventure begins here.
+      </p>
+      <div class="destination-images">
+        <div class="dimage image1"><a href="">Maldives</a></div>
+        <div class="dimage image2"><a href="">Indonesia</a></div>
+        <div class="dimage image3"><a href="">Srilanka</a></div>
+        <div class="dimage image4"><a href="">North America</a></div>
+        <div class="dimage image5"><a href="">Kashmir-India</a></div>
+        <div class="dimage image6"><a href="">Bangladesh</a></div>
+        <div class="dimage image7"><a href="">Bandarban-BD</a></div>
+      </div>
+    </section>
+    <!-- why choose us -->
+    <section class="why-choose-us">
+      <h3 class="title">Why Choose Us</h3>
+      <p class="title-description">
+        Elevate your travel experience. Handpicked hotels, world-class
+        services, and our best price guarantee ensure unparalleled
+        satisfaction and value.
+      </p>
+      <div class="card-container">
+        <div class="card-1 container">
+          <div class="hotel-button"><i class="fa-solid fa-hotel"></i></div>
+
+          <h4>Handpicked Hotels</h4>
+          <p>
+            Indulge in luxury and comfort with our meticulously selected
+            accommodations, ensuring an enchanting stay at every destination.
+          </p>
         </div>
-        <div class="dealspart-2">
-          <div class="dealcard">
-            <div class="cardtop">
-              <i class="fa-solid fa-clock"> <span>7 Day / 6 Night</span></i>
-              <i class="fa-solid fa-people-group"><span>Max : 10</span></i>
-              <i class="fa-solid fa-location-dot"><span> Singapore</span></i>
-            </div>
-            <h4>Tour To Singapore</h4>
-            <p>
-              Singapore a dynamic cityscape, iconic landmarks, diverse cuisine,
-              and vibrant culture. Uncover the allure of this modern metropolis
-              and rich heritage.
-            </p>
-            <h5>Price: $1500 - $1800</h5>
-            <br />
-            <button>Book Now</button>
+        <div class="card-2 container">
+          <div class="map-button">
+            <i class="fa-solid fa-map-location"></i>
           </div>
+          <h4>World Class Service</h4>
+          <p>
+            Experience excellence with our dedicated team, providing
+            unparalleled assistance, guidance, and personalized services
+            throughout your journey.
+          </p>
         </div>
-        <div class="dealspart-1">
-          <div class="dealcard">
-            <div class="cardtop">
-              <i class="fa-solid fa-clock"> <span>7 Day / 6 Night</span></i>
-              <i class="fa-solid fa-people-group"><span>Max : 10</span></i>
-              <i class="fa-solid fa-location-dot"><span> Thailand</span></i>
-            </div>
-            <h4>Tour To Thailand</h4>
-            <p>
-              In Thailand explore exotic temples, pristine beaches, and vibrant
-              markets. Immerse in rich culture and indulge in thrilling
-              adventures. Unforgettable memories await.
-            </p>
-            <h5>Price: $1300 - $1500</h5>
-            <br />
-            <button>Book Now</button>
+        <div class="card-3 container">
+          <div class="price-button"><i class="fa-solid fa-tags"></i></div>
+          <h4>Best Price Guarantee</h4>
+          <p>
+            Enjoy unbeatable value. We promise the best prices for your dream
+            vacations, ensuring affordability without compromising on quality
+            and experience.
+          </p>
+        </div>
+      </div>
+    </section>
+    <!-- packages and discoutns -->
+    <section id="packages" class="deals-discount">
+      <h3 class="title">Deals & Discounts</h3>
+      <p class="title-description">
+        Unlock savings! Dive into our exclusive deals and discounts. Elevate
+        your travel experience without breaking the bank. Your adventure, your
+        savings.
+      </p>
+      <div class="dealspart-1">
+        <div class="dealcard">
+          <div class="cardtop">
+            <i class="fa-solid fa-clock"> <span>7 Day / 6 Night</span></i>
+            <i class="fa-solid fa-people-group"><span>Max : 10</span></i>
+            <i class="fa-solid fa-location-dot"><span> Malaysia</span></i>
           </div>
+          <h4>Tour To Malaysia</h4>
+          <p>
+            Malaysia beckons with diverse attractions. Explore bustling
+            cities, tropical rainforests, and cultural treasures. A tapestry
+            of experiences awaits in Malaysia.
+          </p>
+          <h5>Price: $1400 - $1600</h5>
+          <br />
+          <button>Book Now</button>
         </div>
-      </section>
-      <!-- <section class="perfect-place popular-tour">
+      </div>
+      <div class="dealspart-2">
+        <div class="dealcard">
+          <div class="cardtop">
+            <i class="fa-solid fa-clock"> <span>7 Day / 6 Night</span></i>
+            <i class="fa-solid fa-people-group"><span>Max : 10</span></i>
+            <i class="fa-solid fa-location-dot"><span> Singapore</span></i>
+          </div>
+          <h4>Tour To Singapore</h4>
+          <p>
+            Singapore a dynamic cityscape, iconic landmarks, diverse cuisine,
+            and vibrant culture. Uncover the allure of this modern metropolis
+            and rich heritage.
+          </p>
+          <h5>Price: $1500 - $1800</h5>
+          <br />
+          <button>Book Now</button>
+        </div>
+      </div>
+      <div class="dealspart-1">
+        <div class="dealcard">
+          <div class="cardtop">
+            <i class="fa-solid fa-clock"> <span>7 Day / 6 Night</span></i>
+            <i class="fa-solid fa-people-group"><span>Max : 10</span></i>
+            <i class="fa-solid fa-location-dot"><span> Thailand</span></i>
+          </div>
+          <h4>Tour To Thailand</h4>
+          <p>
+            In Thailand explore exotic temples, pristine beaches, and vibrant
+            markets. Immerse in rich culture and indulge in thrilling
+            adventures. Unforgettable memories await.
+          </p>
+          <h5>Price: $1300 - $1500</h5>
+          <br />
+          <button>Book Now</button>
+        </div>
+      </div>
+    </section>
+    <!--
+    <section class="perfect-place popular-tour">
         <div class="tour-part1">
           <h3 class="title">Recommended Place</h3>
           <p class="title-description">
@@ -242,79 +244,83 @@
         <div class="tour-part2">
           <img src="./images/video_ss.png" alt="Mountain Everest Image" />
         </div>
-      </section> -->
+    </section>
+    -->
 
-      <!-- Customer Feedbacks -->
-      <section id="testmonial" class="feedback">
-        <h3 class="title">Customer Feedback</h3>
-        <div class="card-container">
-          <div class="card-1 container">
-            <div class="star-button">
-              <i class="fa-solid fa-star"></i>
-              <i class="fa-solid fa-star"></i>
-              <i class="fa-solid fa-star"></i>
-              <i class="fa-solid fa-star"></i>
-              <i class="fa-solid fa-star"></i>
-            </div>
-  
-            <h4>Name: Al Hasan</h4>
-            <p>
-              "Exceptional service! Seamless planning, friendly staff, and unforgettable experiences. A top-tier travel agency, highly recommended for any adventure."
-            </p>
+    <!-- Customer Feedbacks -->
+    <section id="testmonial" class="feedback">
+      <h3 class="title">Customer Feedback</h3>
+      <div class="card-container">
+        <div class="card-1 container">
+          <div class="star-button">
+            <i class="fa-solid fa-star"></i>
+            <i class="fa-solid fa-star"></i>
+            <i class="fa-solid fa-star"></i>
+            <i class="fa-solid fa-star"></i>
+            <i class="fa-solid fa-star"></i>
           </div>
-          <div class="card-2 container">
-            <div class="star-button">
-              <i class="fa-solid fa-star"></i>
-              <i class="fa-solid fa-star"></i>
-              <i class="fa-solid fa-star"></i>
-              <i class="fa-solid fa-star"></i>
-            </div>
-            <h4>Name: Alex Carry</h4>
-            <p>
-              "Great experience overall. Professional assistance, good itinerary. Minor hiccups, but responsive customer service. Worth considering for your travel plans."
-            </p>
-          </div>
-          <div class="card-3 container">
-            <div class="star-button">
-              <i class="fa-solid fa-star"></i>
-              <i class="fa-solid fa-star"></i>
-              <i class="fa-solid fa-star"></i>
-            </div>
-            <h4>Name: Anil Kumble</h4>
-            <p>
-              "Decent service. Some issues with communication and delays. Average experience; improvements needed for a smoother customer journey. Fairly satisfactory for the cost."
-            </p>
-          </div>
-        </div>
-      </section>
 
-      <!-- Subscriptions -->
-      <section class="subcriptions">
-        <h3 class="title">Newsletter Subscriptions</h3>
-        <div class="newsletter">
-          <div class="newspart-1">
-            <h3>Newsletter</h3>
-            <p>Get your daily dose of travel news & tips. Sign up today!</p>
-            <label for="name">
-              <input type="text" id="name" placeholder="Enter Your Name" />
-            </label>
-            <br />
-            <label for="email">
-              <input type="email" id="email" placeholder="Enter Your Email" />
-            </label>
-            <br />
-            <label for="subscribe">
-              <button type="submit" id="subscribe">Subscribe</button>
-            </label>
-          </div>
-          <div class="discount-cupon">ahtour.com<br />Save up to 70%</div>
-          <div class="newspart-2">
-            <img src="./images/newsletter.png" alt="newsletter image" />
-          </div>
+          <h4>Name: Al Hasan</h4>
+          <p>
+            "Exceptional service! Seamless planning, friendly staff, and unforgettable experiences. A top-tier travel
+            agency, highly recommended for any adventure."
+          </p>
         </div>
-      </section>
-    </main>
-  </body>
+        <div class="card-2 container">
+          <div class="star-button">
+            <i class="fa-solid fa-star"></i>
+            <i class="fa-solid fa-star"></i>
+            <i class="fa-solid fa-star"></i>
+            <i class="fa-solid fa-star"></i>
+          </div>
+          <h4>Name: Alex Carry</h4>
+          <p>
+            "Great experience overall. Professional assistance, good itinerary. Minor hiccups, but responsive customer
+            service. Worth considering for your travel plans."
+          </p>
+        </div>
+        <div class="card-3 container">
+          <div class="star-button">
+            <i class="fa-solid fa-star"></i>
+            <i class="fa-solid fa-star"></i>
+            <i class="fa-solid fa-star"></i>
+          </div>
+          <h4>Name: Anil Kumble</h4>
+          <p>
+            "Decent service. Some issues with communication and delays. Average experience; improvements needed for a
+            smoother customer journey. Fairly satisfactory for the cost."
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- Subscriptions -->
+    <section class="subcriptions">
+      <h3 class="title">Newsletter Subscriptions</h3>
+      <div class="newsletter">
+        <div class="newspart-1">
+          <h3>Newsletter</h3>
+          <p>Get your daily dose of travel news & tips. Sign up today!</p>
+          <label for="name">
+            <input type="text" id="name" placeholder="Enter Your Name" />
+          </label>
+          <br />
+          <label for="email">
+            <input type="email" id="email" placeholder="Enter Your Email" />
+          </label>
+          <br />
+          <label for="subscribe">
+            <button type="submit" id="subscribe">Subscribe</button>
+          </label>
+        </div>
+        <div class="discount-cupon">ahtour.com<br />Save up to 70%</div>
+        <div class="newspart-2">
+          <img src="./images/newsletter.png" alt="newsletter image" />
+        </div>
+      </div>
+    </section>
+  </main>
+  <!-- footer section -->
   <footer id="contact">
     <div class="footer-first">
       <img src="./images/logo.png" alt="banner image" />
@@ -334,4 +340,6 @@
     <hr />
     <p>&copy;2017, All Rights Reserved.</p>
   </footer>
+</body>
+
 </html>
