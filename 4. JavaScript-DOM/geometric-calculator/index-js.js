@@ -20,6 +20,7 @@ function calculateArea(...args) {
         ans *= parseFloat(args[0]);
         basIndex = 1; heightIndex = 2;
     }
+
     ans *= parseFloat(document.getElementById(args[basIndex]).value);
     ans *= parseFloat(document.getElementById(args[heightIndex]).value);
     ans = ans.toFixed(2);
