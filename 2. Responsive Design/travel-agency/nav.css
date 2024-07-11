@@ -1,0 +1,138 @@
+.red-text {
+    color: #FF5400;
+}
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.left-nav {
+    display: flex;
+}
+.logo-text {
+    font-size: 3rem;
+    font-weight: bolder;
+    padding-left: 0.5rem;
+}
+nav ul {
+    display: flex;
+    justify-content: flex-end;
+    list-style-type: none;
+}
+nav a {
+    color: #424247;
+    font-size: 1.5rem;
+    text-decoration: none;
+    margin-left: 1.5rem;
+}
+nav a:hover { 
+    padding: 0.3rem;
+    border-radius: 0.2rem;
+    background-color: rgb(221, 220, 225);
+    transition: 0.5s;
+}
+/* nav ul {
+    float: right;
+}
+.left-nav {
+    display: flex;
+}
+.logo-text {
+    font-size: 3rem;
+    font-weight: bolder;
+    margin-left: 1rem;
+}
+
+.right-nav {
+    display: flex;
+    justify-content: flex-end;
+}
+.right-nav ul {
+    display: flex;
+    justify-content: flex-end;
+    list-style-type: none;
+}
+.right-nav a {
+    color: #424247;
+    font-size: 1.5rem;
+    text-decoration: none;
+    margin-left: 1.5rem;
+}
+.right-nav a:hover { 
+    padding: 0.3rem;
+    border-radius: 0.2rem;
+    background-color: rgb(221, 220, 225);
+    transition: 0.5s;
+}
+*/
+.check-button {
+    font-size: 2.8rem;
+    cursor: pointer;
+    line-height: 5rem;
+    margin-right: 0.5rem;
+    display: none;
+}
+#check {
+    display: none;
+}
+
+/* media query */
+
+/* small devices */
+@media screen and (max-width: 576px) {
+    .logo-text {
+        font-size: 2.4rem;
+    }
+    .check-button {
+        display: block;
+    }
+    nav ul {
+        display: block;
+        position: fixed;
+        width: 100%;
+        height: 100%;
+        left: -110%;
+        color: #fff;
+        background: #000;
+        top: 7rem;
+        text-align: center;
+    }
+    li {
+        padding: 2.5rem;
+        border-bottom: 2px solid #fff;
+    }
+    #check:hover ~ ul {
+        left: 0;
+    }
+    #check:checked ~ ul {
+        left: 0;
+    }
+}
+/* medium and large */
+@media screen and (min-width:576px) and (max-width:992px){
+    .check-button {
+        display: block;
+    }
+    nav ul {
+        display: block;
+        position: fixed;
+        width: 100%;
+        height: 100%;
+        left: -110%;
+        color: #fff;
+        background: #000;
+        top: 7rem;
+        text-align: center;
+    }
+    li {
+        padding: 2.5rem;
+        border-bottom: 2px solid #fff;
+    }
+    /* #check:hover ~ ul {
+        left: 0;
+    } */
+    #check:checked ~ ul {
+        left: 0;
+    }
+}
+/* Extra large -> the above simple design*/
