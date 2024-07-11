@@ -1,2 +1,1 @@
-"# Topicwise-Projects" 
-This Repo is a container for storing mini projects those are develope on specific topics.
+"# Topicwise-Projects"- This repo is a container for storing mini projects developed on specific topics.
