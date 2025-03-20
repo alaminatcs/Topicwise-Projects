@@ -1,0 +1,23 @@
+{% extends 'base.html' %} {% block content %}
+
+<h1 class="text-center text-2xl font-bold mb-4">I'm inside the Order Page.</h1>
+<div class="w-3/4 mockup-window bg-base-300 border m-auto">
+    <div class="bg-base-200 flex justify-center px-4 py-16">
+        <div class="overflow-x-auto">
+            <table class="table table-pin-rows">
+              <thead>
+                <tr><th class="text-2xl font-bold underline">Order Summary</th></tr>
+              </thead>
+              <tbody>
+                <tr><td><span class="underline">Name</span>: {{ n }}</td></tr>
+                <tr><td><span class="underline">Phone</span>: {{ p }}</td></tr>
+                <tr><td><span class="underline">Email</span>: {{ e }}</td></tr>
+                <tr><td><span class="underline">Product</span>: {{ i }}</td></tr>
+                <tr><td><span class="underline">Budget-amount</span>: ${{ a }}</td></tr>
+              </tbody>
+            </table>
+        </div>
+    </div>
+</div>
+
+{% endblock %}

@@ -1,0 +1,13 @@
+{% extends "base.html" %} {% block content %}
+{% load tailwind_filters %}
+<h1 class="text-center text-2xl font-bold">Add New Employee Info</h1>
+<div>
+    <form class="w-1/2 m-auto pt-6" method="POST">
+        {% csrf_token %}
+        {{ data | crispy }}
+        <div class="flex justify-center mt-2">
+            <button class="btn px-12 font-bold text-xl">Submit</button>
+        </div>
+    </form>
+</div>
+{% endblock %}

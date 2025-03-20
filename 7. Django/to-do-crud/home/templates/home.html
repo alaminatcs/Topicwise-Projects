@@ -10,13 +10,16 @@
 <body>
     {% comment %} Navbar {% endcomment %}
     <div class="navbar bg-base-100 shadow-sm">
-        <a class="btn btn-ghost text-xl">AH's To-Do List</a>
+        <a class="btn btn-ghost text-xl" href={% url 'home' %}>AH's To-Do List</a>
     </div>
+    {% block content %}
 
-    {% comment %} List {% endcomment %}
-    {% include "due.html" %}
+        {% comment %} List {% endcomment %}
+        {% include "due.html" %}
 
-    {% comment %} Completed List {% endcomment %}
-    {% include "completed.html" %}
+        {% comment %} Completed List {% endcomment %}
+        {% include "completed.html" %}
+    
+    {% endblock %}
 </body>
 </html>

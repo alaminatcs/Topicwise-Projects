@@ -1,0 +1,33 @@
+{% extends 'base.html' %} {% block content %}
+<h1 class="text-center font-bold text-3xl">Order Booking</h1>
+<div>
+  <form class="w-1/2 m-auto pt-6" method="POST" action="{% url 'ordered' %}">
+    {% csrf_token %}
+    <label class="input input-bordered flex items-center mt-2">
+      <input type="text" name="name" placeholder="Customer Name" />
+    </label>
+    <label class="input input-bordered flex items-center mt-2">
+      <input type="tel" name="phone" placeholder="Phone Number" />
+    </label>
+    <label class="input input-bordered flex items-center mt-2">
+      <input type="email" name="email" placeholder="Email" />
+    </label>
+    <label class="form-control w-full mt-2">
+      <select name="item" class="select select-bordered">
+        <option disabled selected>Pick a Item</option>
+        <option>Cheese</option>
+        <option>Veggie</option>
+        <option>Pepperoni</option>
+        <option>Margherita</option>
+        <option>Hawaiian</option>
+      </select>
+    </label>
+    <label class="input input-bordered flex items-center mt-2">
+      <input type="number" name="amount" placeholder="Budget Amount" />
+    </label>
+    <div class="flex justify-center mt-2">
+      <button class="btn px-12 font-bold text-xl">Submit</button>
+    </div>
+  </form>
+</div>
+{% endblock %}
