@@ -13,13 +13,22 @@
         <a class="btn btn-ghost text-xl" href={% url 'home' %}>AH's To-Do List</a>
     </div>
     {% block content %}
-
         {% comment %} List {% endcomment %}
-        {% include "due.html" %}
+    `   <p class="p-4 pb-2 underline text-xl opacity-60 tracking-wide">Due List:</p>
+        {% if tasks %}
+            {% include "due.html" with tasks=tasks %}
+        {% else %}
+            <h2>There is no tasks dues</h2>
+        {% endif %}
+
+        {% comment %} Add New Task {% endcomment %}
+        <div class="text-center mt-4">
+            <a href={% url 'task_add' %} class="btn">Add New Task</a>
+        </div>
 
         {% comment %} Completed List {% endcomment %}
-        {% include "completed.html" %}
-    
+        <p class="p-4 pb-2 text-xl underline opacity-60 tracking-wide">Completed List:</p>
+        {% include "completed.html" with del_tasks=del_tasks %}
     {% endblock %}
 </body>
 </html>
