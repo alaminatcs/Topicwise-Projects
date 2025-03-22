@@ -1,0 +1,12 @@
+{% extends "home.html" %}
+{% load tailwind_filters %}
+
+{% block content %}
+    <form method="POST" class="w-1/2 mx-auto mt-8">
+        {% csrf_token %}
+        {{ form | crispy }}
+        <div class="text-center">
+            <input type="submit" class="btn" value="Add Task">
+        </div>
+    </form>
+{% endblock content %}

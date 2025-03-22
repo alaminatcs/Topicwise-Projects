@@ -1,0 +1,25 @@
+<ul class="list bg-base-100 rounded-box shadow-md">
+    {% for task in tasks %}
+      <li class="list-row">
+        <div class="text-4xl font-thin opacity-30 tabular-nums">{{ forloop.counter }}</div>
+                
+        <div class="list-col-grow">
+          <div>{{ task.title }}</div>
+          {% comment %} Task Details {% endcomment %}
+          <div class="text-xs font-semibold opacity-60">
+            <a href="#task_details_{{ task.id }}">See Details</a>
+            
+            <div class="modal" role="dialog" id="task_details_{{ task.id }}">
+              <div class="modal-box">
+                <h3 class="text-lg font-bold">{{ task.title }}</h3>
+                <p class="py-4">{{ task.descriptions }}</p>
+                <div class="modal-action"><a href={% url 'home' %} class="btn">Close</a></div>
+              </div>
+            </div>
+          </div>
+        </div>
+        
+        <a href={% url 'task_remove' task.id %}><kbd class="btn btn-error kbd">del</kbd></a>
+      </li>
+    {% endfor %}
+</ul>

@@ -1,0 +1,12 @@
+<ul class="list bg-base-100 rounded-box shadow-md">
+    {% for task in del_tasks %}
+      <li class="list-row">
+        <div class="text-4xl font-thin opacity-30 tabular-nums line-through">{{ forloop.counter }}</div>
+                
+        <div class="list-col-grow">
+          <div class="line-through">{{ task.title }}</div>
+          <div class="text-xs font-semibold opacity-60">Task Completed</div>
+        </div>
+      </li>
+    {% endfor %}
+</ul>
